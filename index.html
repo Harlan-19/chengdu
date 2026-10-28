@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- 页面基础编码与视口设置 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="蜀韵•成都：以可爱小熊猫为主题的成都文化旅游宣传网站" />
+  <title>蜀韵•成都 - 首页</title>
+  <!-- 引入外部样式表，实现结构与样式分离 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ==================== 页头 ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- 左侧：Logo + 网站标题 -->
+      <a class="brand" href="index.html" aria-label="蜀韵•成都 首页">
+        <img class="brand-logo" src="images/logo.svg" alt="小熊猫Logo" />
+        <span class="brand-title">蜀韵•成都</span>
+      </a>
+
+      <!-- 右侧：导航栏（首页为当前页，高亮显示） -->
+      <nav class="main-nav" aria-label="主导航">
+        <ul class="nav-list">
+          <li><a class="nav-link active" href="index.html" aria-current="page">首页</a></li>
+          <li><a class="nav-link" href="food.html">美食</a></li>
+          <li><a class="nav-link" href="scenery.html">景点</a></li>
+          <li><a class="nav-link" href="culture.html">文化</a></li>
+          <li><a class="nav-link" href="guide.html">攻略</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 全屏 Banner 轮播区 ==================== -->
+    <section class="banner" aria-label="成都风光轮播图">
+      <!-- 幻灯片列表：共三张，第一张默认激活 -->
+      <div class="slides">
+        <figure class="slide active">
+          <img src="images\成都大熊猫繁育研究基地半日游+中英文导游+近距观察大熊猫.jpg" alt="竹林里的可爱小熊猫" />
+          <figcaption class="slide-caption">
+            <h2>熊猫故乡 · 萌动成都</h2>
+            <p>走进大熊猫基地，和国宝来一场软萌的相遇</p>
+          </figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images/090aadee07be7010f74d0d6076633cf3.png" alt="锦里古街灯笼下的小熊猫" />
+          <figcaption class="slide-caption">
+            <h2>锦里古街 · 市井烟火</h2>
+            <p>红灯笼与飞檐翘角，漫步千年蜀都风情</p>
+          </figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="images\R-C.jpg" alt="小熊猫与热腾腾的火锅" />
+          <figcaption class="slide-caption">
+            <h2>舌尖成都 · 麻辣鲜香</h2>
+            <p>一口火锅，一杯盖碗茶，尽享巴适生活</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- 左右切换按钮 -->
+      <button class="slide-btn prev" type="button" aria-label="上一张">&#10094;</button>
+      <button class="slide-btn next" type="button" aria-label="下一张">&#10095;</button>
+
+      <!-- 底部圆点指示器 -->
+      <div class="slide-dots" role="tablist" aria-label="轮播图指示器">
+        <button class="dot active" type="button" role="tab" aria-label="第1张"></button>
+        <button class="dot" type="button" role="tab" aria-label="第2张"></button>
+        <button class="dot" type="button" role="tab" aria-label="第3张"></button>
+      </div>
+    </section>
+
+    <!-- ==================== 宣传视频区 ==================== -->
+    <section class="video-section">
+      <h2 class="section-title">🎬 一起看成都</h2>
+      <div class="video-wrap">
+        <video controls preload="metadata" poster="images/poster.svg">
+          <source src="video/chengdu.mp4" type="video/mp4" />
+          <!-- 浏览器不支持视频或视频文件缺失时的提示 -->
+          您的浏览器不支持视频播放，或视频文件 video/chengdu.mp4 尚未放置。
+        </video>
+      </div>
+
+      <!-- 成都介绍文字（约100字） -->
+      <p class="intro">
+        成都，别称“蓉城”“天府之国”，是四川省省会，也是国宝大熊猫的故乡。这里有悠久的三国文化与古蜀文明，有宽窄巷子、锦里的市井烟火，更有麻辣鲜香的火锅与串串。慢节奏的茶馆时光，让这座城市温柔又巴适，欢迎来成都，和小熊猫一起慢慢玩！
+      </p>
+    </section>
+  </main>
+
+  <!-- ==================== 页尾 ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/logo.svg" alt="小熊猫Logo" />
+        <span>蜀韵•成都</span>
+      </div>
+      <!-- 页尾快捷链接 -->
+      <ul class="footer-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="food.html">美食</a></li>
+        <li><a href="scenery.html">景点</a></li>
+        <li><a href="culture.html">文化</a></li>
+        <li><a href="guide.html">攻略</a></li>
+      </ul>
+      <p class="copyright">© 2026 蜀韵•成都 版权所有 · 和小熊猫一起游成都 🐼</p>
+    </div>
+  </footer>
+
+  <!-- 引入外部脚本：轮播图交互逻辑 -->
+  <script src="js/main.js"></script>
+</body>
+</html>
